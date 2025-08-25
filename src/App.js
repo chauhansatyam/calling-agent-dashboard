@@ -473,8 +473,8 @@ const CallingAgentDashboard = () => {
       if (!tableName) throw new Error("Invalid agent table name");
 
       const updateData = {
-        status: leadUpdateForm.status,
-        call_status: leadUpdateForm.call_status,
+        status: leadUpdateForm.lead_summary,//lead_summary
+        call_status: leadUpdateForm.disposition,
         user_remark: leadUpdateForm.user_remark,
         next_follow_up: leadUpdateForm.next_follow_up ? `${leadUpdateForm.next_follow_up}T09:00:00` : null,
         updated_at: new Date().toISOString(),
